@@ -1,0 +1,11 @@
+extern crate common;
+
+use hil::spi_master::SpiMaster;
+use hil::gpio::GPIOPin;
+use drivers::virtual_i2c::{MuxI2C, I2CDevice};
+
+static mut spi_read_buf:  [u8; 64] = [0; 64]; //initialising a zero array
+static mut spi_write_buf: [u8; 64] = [0; 64];
+
+
+
